@@ -122,15 +122,31 @@
 # seventh_task()
 
 
-def eighth_task():
-    a = [1, 2, 3, 4, 4, 5, 5, 6, 7, 7, 8, 9, 10]
+# def eighth_task():
+#     a = [1, 2, 3, 4, 4, 5, 5, 6, 7, 7, 8, 9, 10]
+#
+#     b = int(input("введите число"))
+#     c = int(input("введите кол во"))
+#     for i in a:
+#         if a.count(b) >= c:
+#             print("число", b, "встречается в списке", a.count(b), "раз(а)")
+#             break
+#         else:
+#             print("либо вашего числа нет с списке, либо ")
+# eighth_task()
 
-    b = int(input("введите число"))
-    c = int(input("введите кол во"))
-    for i in a:
-        if a.count(b) >= c:
-            print("число", b, "встречается в списке", a.count(b), "раз(а)")
-            break
-        else:
-            print("либо вашего числа нет с списке, либо ")
-eighth_task()
+
+def calc():
+    try:
+        while (True):
+            a = input("Введите ваше выражение (enter to exit) ")
+            if a == "":
+                break
+            print(a + "=" + str(eval(a)))
+    except TypeError:
+        print("Нельзя складывать числа и буквы")
+    except NameError:
+        print("Нельзя складывать числа и буквы")
+
+
+calc()
