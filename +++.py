@@ -147,6 +147,10 @@ def calc():
         print("Нельзя складывать числа и буквы")
     except NameError:
         print("Нельзя складывать числа и буквы")
+    except SyntaxError:
+        print("Что то пошло не так")
+    except ZeroDivisionError:
+        print("На ноль делить нельзя")
 
 
 calc()
